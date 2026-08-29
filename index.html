@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>365 Photo Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="home" class="home">
+    <section class="hero" aria-label="폭포수 그리드 갤러리">
+      <div id="mosaic" class="mosaic"></div>
+      <div class="fallback-message" id="fallbackMessage">
+        <small>images 폴더에 사진을 넣어주세요</small>
+      </div>
+    </section>
+
+    <!-- 수정된 좌측 하단 텍스트 영역 -->
+    <div class="bottom-left-text">
+      <div class="text-365">365</div>
+      <div class="text-loveu">love U</div>
+    </div>
+  </main>
+
+  <!-- 사진 클로즈업 갤러리 -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="closeButton" class="close-button" aria-label="닫기">✕</button>
+    <button id="prevButton" class="nav-button prev" aria-label="이전 사진">‹</button>
+    
+    <figure class="lightbox-figure">
+      <img id="lightboxImage" src="" alt="">
+    </figure>
+
+    <button id="nextButton" class="nav-button next" aria-label="다음 사진">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

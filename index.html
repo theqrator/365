@@ -1,34 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>우리의 365일</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>365 DAYS</title>
+  <meta name="description" content="365일을 기념하는 우리만의 포토 갤러리">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Our 365 Days ❤️</h1>
-        <p class="subtitle">함께한 지 벌써 1년이 되었네</p>
+  <main id="home" class="home">
+    <div class="top-label">365 DAYS / ANNIVERSARY</div>
 
-        <!-- 편지 영역 -->
-        <div class="letter-box">
-            <p>처음 만나서 지금까지 함께 웃고 울었던 소중한 시간들.</p>
-            <p>앞으로도 우리 더 예쁘게 사랑하자. 많이 사랑해!</p>
-        </div>
+    <section class="hero" aria-label="365 사진 모자이크">
+      <div id="mosaic" class="mosaic"></div>
+      <div class="fallback-message" id="fallbackMessage">
+        <span>365</span>
+        <small>images 폴더에 사진을 넣어주세요</small>
+      </div>
+    </section>
 
-        <!-- 사진 갤러리 영역 -->
-        <div class="gallery">
-            <!-- 사진을 추가하려면 아래 <img> 태그를 복사해서 쓰세요 -->
-            <div class="photo-card">
-                <img src="images/photo1.jpg" alt="추억 사진 1">
-                <p class="photo-desc">우리의 첫 데이트 날</p>
-            </div>
-            <div class="photo-card">
-                <img src="images/photo2.jpg" alt="추억 사진 2">
-                <p class="photo-desc">바다 보러 갔던 날</p>
-            </div>
-        </div>
+    <div class="bottom-note">CLICK A PHOTO TO REMEMBER</div>
+  </main>
+
+  <!-- 사진 클로즈업 -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="closeButton" class="close-button" aria-label="닫기">×</button>
+    <button id="prevButton" class="nav-button prev" aria-label="이전 사진">‹</button>
+    <figure class="lightbox-figure">
+      <img id="lightboxImage" src="" alt="">
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+    <button id="nextButton" class="nav-button next" aria-label="다음 사진">›</button>
+  </div>
+
+  <!-- 상시 브레이킹 뉴스 -->
+  <div class="breaking-bar" aria-label="브레이킹 뉴스">
+    <div class="breaking-label">BREAKING NEWS</div>
+    <div class="ticker-window">
+      <div class="ticker-track" id="tickerTrack">
+        <span>경축! 365일을 축하드립니다! 사랑합니다! 감사합니다!</span>
+        <span>경축! 365일을 축하드립니다! 사랑합니다! 감사합니다!</span>
+        <span>경축! 365일을 축하드립니다! 사랑합니다! 감사합니다!</span>
+        <span>경축! 365일을 축하드립니다! 사랑합니다! 감사합니다!</span>
+      </div>
     </div>
+  </div>
+
+  <script src="images.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

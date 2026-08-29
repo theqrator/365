@@ -3,53 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>365 DAYS</title>
-  <meta name="description" content="365일을 기념하는 우리만의 포토 갤러리">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>365 Photo Gallery</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main id="home" class="home">
-    <div class="top-label">365 DAYS / ANNIVERSARY</div>
+    <div class="top-label">OUR MEMORIES / 365 GALLERY</div>
 
     <section class="hero" aria-label="365 사진 모자이크">
       <div id="mosaic" class="mosaic"></div>
       <div class="fallback-message" id="fallbackMessage">
-        <span>365</span>
         <small>images 폴더에 사진을 넣어주세요</small>
       </div>
     </section>
 
-    <div class="bottom-note">CLICK A PHOTO TO REMEMBER</div>
+    <div class="bottom-note">CLICK A PHOTO TO VIEW</div>
   </main>
 
-  <!-- 사진 클로즈업 -->
+  <!-- 사진 클로즈업 모달 (좌우 넘기기 버튼 추가) -->
   <div id="lightbox" class="lightbox" aria-hidden="true">
-    <button id="closeButton" class="close-button" aria-label="닫기">×</button>
+    <button id="closeButton" class="close-button" aria-label="닫기">✕</button>
     <button id="prevButton" class="nav-button prev" aria-label="이전 사진">‹</button>
+    
     <figure class="lightbox-figure">
       <img id="lightboxImage" src="" alt="">
-      <figcaption id="lightboxCaption"></figcaption>
     </figure>
+
     <button id="nextButton" class="nav-button next" aria-label="다음 사진">›</button>
   </div>
 
-  <!-- 상시 브레이킹 뉴스 -->
-  <div class="breaking-bar" aria-label="브레이킹 뉴스">
-    <div class="breaking-label">BREAKING NEWS</div>
-    <div class="ticker-window">
-      <div class="ticker-track" id="tickerTrack">
-        <span>경축! 365일을 축하드립니다! 사랑합니다! 감사합니다!</span>
-        <span>경축! 365일을 축하드립니다! 사랑합니다! 감사합니다!</span>
-        <span>경축! 365일을 축하드립니다! 사랑합니다! 감사합니다!</span>
-        <span>경축! 365일을 축하드립니다! 사랑합니다! 감사합니다!</span>
-      </div>
-    </div>
-  </div>
-
-  <script src="images.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
